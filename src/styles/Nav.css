@@ -7,4 +7,5 @@
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 50px;
+    font-family: 'Poppins', sans-serif;
 }

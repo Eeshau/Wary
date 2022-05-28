@@ -4,6 +4,7 @@
   color: #61dafb;
   text-align: left;
   padding: 40px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .Welcome-message h3 {
@@ -12,7 +13,9 @@
 
 
 
-
+.Report-Form {
+  font-family: 'Poppins', sans-serif;
+}
 
 .Report-Form label {
   color: green;
