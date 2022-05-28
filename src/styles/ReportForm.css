@@ -1,0 +1,98 @@
+.FormParent {
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    left: 778px;
+    top: 176px;
+    border-radius: 10px;
+
+    background: #FFFFFF;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    box-shadow: rgba(50, 92, 93, 0.144) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.FormParent h1{
+    text-align: left;
+    padding: 0px 30px;
+}
+
+.FormParent select {
+    width: 100%;
+    padding: 7px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 0.5px solid #d3d3d3;
+    background-color: hsla(0,12%,93%,.541);
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.FormParent option:hover {
+    background-color: #61dafb;
+    color: white;
+    transition: background-color 1.5s ease;
+    border-radius: 10px;
+
+}
+
+
+.FormParent form {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: left;
+    padding: 30px;
+    align-content: center;
+    align-items: center;
+}
+
+
+.FormParent input {
+    width: 100%;
+    padding: 7px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 0.5px solid #d3d3d3;
+    background-color: hsla(0,12%,93%,.541);
+    font-family: "Poppins", sans-serif;
+  }
+
+
+.FormParent textarea {
+    width: 100%;
+    padding: 7px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 0.5px solid #d3d3d3;
+    background-color: hsla(0,12%,93%,.541);
+    font-family: "Poppins", sans-serif;
+}
+
+.FormParent label{
+    font-weight: 700;
+}
+
+.FormParent button{
+    background-color: #61dafb;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border: solid 1.5px #61dafb;
+    border-radius: 20px;
+    padding: 15px 1px;
+    font-weight: 700;
+    color: white;
+    transition: background-color 1.5s ease;
+    text-align: center;
+    width: 170px;
+}
+
+
+.FormParent button:hover {
+    background-color: transparent;
+    color: #61dafb;
+}
+
+

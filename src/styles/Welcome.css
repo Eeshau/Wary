@@ -1,28 +1,35 @@
+.Welcome-main {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px
+}
+
+
 .Welcome-message {
-    color: #61dafb;
     text-align: left;
     padding: 40px;
   }
   
+
+
   .Welcome-message h3 {
     font-size: 15px;
+    color: #61dafb;
   }
   
   
-  
-  
-  
-  .Report-Form label {
-    color: green;
+  .Welcome-message h1 {
+    font-size: 50px;
+    color: black;
+  }
+
+  .Welcome-message p {
+    width: 350px;
+    font-size: 40px;
+    color: black;
   }
   
-  .Report-Form input {
-    border-radius: 20%;
-    border: none;
-    background-color: lightgrey;
-  }
   
-  
-  
+
   
   
