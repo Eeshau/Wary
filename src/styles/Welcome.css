@@ -1,0 +1,28 @@
+.Welcome-message {
+    color: #61dafb;
+    text-align: left;
+    padding: 40px;
+  }
+  
+  .Welcome-message h3 {
+    font-size: 15px;
+  }
+  
+  
+  
+  
+  
+  .Report-Form label {
+    color: green;
+  }
+  
+  .Report-Form input {
+    border-radius: 20%;
+    border: none;
+    background-color: lightgrey;
+  }
+  
+  
+  
+  
+  
