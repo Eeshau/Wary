@@ -10,8 +10,12 @@
     font-family: 'Poppins', sans-serif;
     padding: 0px 40px;
     text-decoration: none;
+    align-items: center;
 }
 
+.Navbox img {
+    height: 100px;
+}
 
 
 .Navbox a:link { 
