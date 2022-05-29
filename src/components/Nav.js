@@ -6,7 +6,7 @@ function Nav() {
   return (
     <div className='Navbox'>
       <Link to="/">Wary</Link>
-      <Link to="/">Home</Link>
+      <Link to="/">Report</Link>
       <Link to='/browse'>Browse</Link>
       <Link to='/communities'>Dashboard</Link>
     </div>

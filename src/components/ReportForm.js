@@ -3,10 +3,15 @@ import '../styles/ReportForm.css'
 
 function ReportForm(props) {
     const [visability, setVisability] = useState('Immediatly Visabile')
-    
+
+
+
+
+
+
     return (
         <div className='FormParent'>
-            <h1>Submit a suspesion report</h1>
+            <h1>Submit a suspicion report</h1>
             <form>
                 <label>To Community</label>
                 <select data-placeholder="Begin typing a name to filter..." name="cars" id="cars" multiple>

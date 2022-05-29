@@ -4,7 +4,40 @@ import Card from '../components/Card'
 import {React, useState, useEffect} from 'react';
 
 function Browse() {
-  const [searchCategory, setSearchCategory] = useState("")
+  //search cataogory is tags
+  const [searchCategory, setSearchCategory] = useState('')
+  //search is the input bar
+  const [search, setNewSearch] = useState('');
+
+
+  useEffect(() => {
+    
+  }, [])
+
+
+  //DUMMY DATA REPORTS
+  const reports = [
+    { date: '12/1/2011', title: 'why is there', tags: ['assualt', 'abuse'], content: ' content content content content  content content content content ' },
+    { date: '13/1/2011', title: 'Another report', tags: ['assualt', 'racism'], content: ' content content content content  content content content content ' },
+    { date: '14/1/2011', title: 'where is my cat', tags: ['violence', 'fraud', 'abuse'], content: ' content content content content  content content content content ' }
+  ]
+
+  const handleSearchChange = (e) => {
+    setNewSearch(e.target.value);
+  };
+
+  var filtered = reports
+  if (searchCategory == "") {
+      var filtered = !search
+      ? reports
+      : reports.filter((report) =>
+          report.content.toLowerCase().includes(search.toLowerCase()));
+  } else {
+      var filtered = !search
+      ? reports.filter((report) => report.tags.includes(searchCategory.toLowerCase()))
+      : reports.filter((report) => report.tags.includes(searchCategory.toLowerCase()) & report.content.toLowerCase().includes(search.toLowerCase()));
+  }
+
 
 
   return (
@@ -15,22 +48,24 @@ function Browse() {
             <h3>“feeling or showing caution about possible dangers or problems.”</h3>
           </div>
           <div className='Browse-search'>
-            <input placeholder="search"></input>
+          <input placeholder="search" type="text" value={search} onChange={handleSearchChange}  className="SearchBar" ></input>
 
             <div className='filterSection'>
-                    <button style={{ color:  searchCategory == "Saree"? 'white': '#61dafb', backgroundColor:  searchCategory == "Saree"? '#61dafb': 'white'}} onClick={() => searchCategory !="Saree" ? setSearchCategory("Saree") : setSearchCategory("")}>Saree</button>
-                    <button style={{ color:  searchCategory == "Salwar Kameez"? 'white': '#61dafb', backgroundColor:  searchCategory == "Salwar Kameez"? '#61dafb': 'white'}} onClick={() => searchCategory !="Salwar Kameez" ? setSearchCategory("Salwar Kameez") : setSearchCategory("")}>Salwar Kameez</button>
-                    <button style={{ color:  searchCategory == "Kurta"? 'white': '#61dafb', backgroundColor:  searchCategory == "Kurta"? '#61dafb': 'white'}} onClick={() => searchCategory !="Kurta" ? setSearchCategory("Kurta") : setSearchCategory("")}>Kurta</button>
-                    <button style={{ color:  searchCategory == "Lehenga"? 'white': '#61dafb', backgroundColor:  searchCategory == "Lehenga"? '#61dafb': 'white'}} onClick={() => searchCategory!="Lehenga" ? setSearchCategory("Lehenga") : setSearchCategory("")}>Lehenga</button>
-                    <button style={{ color:  searchCategory == "Churidaar"? 'white': '#61dafb', backgroundColor:  searchCategory == "Churidaar"? '#61dafb': 'white'}} onClick={() => searchCategory!="Churidaar" ? setSearchCategory("Churidaar") : setSearchCategory("")}>Churidaar</button>
-                    <button style={{ color:  searchCategory == "Dresses"? 'white': '#61dafb', backgroundColor:  searchCategory == "Dresses"? '#61dafb': 'white'}} onClick={() => searchCategory!="Dresses" ? setSearchCategory("Dresses") : setSearchCategory("")}>Dresses</button>
+                    <button style={{ color:  searchCategory == "Violence"? 'white': '#61dafb', backgroundColor:  searchCategory == "Violence"? '#61dafb': 'white'}} onClick={() => searchCategory !="Violence" ? setSearchCategory("Violence") : setSearchCategory("")}>Violence</button>
+                    <button style={{ color:  searchCategory == "Harassment"? 'white': '#61dafb', backgroundColor:  searchCategory == "Harassment"? '#61dafb': 'white'}} onClick={() => searchCategory !="Harassment" ? setSearchCategory("Harassment") : setSearchCategory("")}>Harassment</button>
+                    <button style={{ color:  searchCategory == "Fraud"? 'white': '#61dafb', backgroundColor:  searchCategory == "Fraud"? '#61dafb': 'white'}} onClick={() => searchCategory !="Fraud" ? setSearchCategory("Fraud") : setSearchCategory("")}>Fraud</button>
+                    <button style={{ color:  searchCategory == "Abuse"? 'white': '#61dafb', backgroundColor:  searchCategory == "Abuse"? '#61dafb': 'white'}} onClick={() => searchCategory!="Abuse" ? setSearchCategory("Abuse") : setSearchCategory("")}>Abuse</button>
+                    <button style={{ color:  searchCategory == "Racism"? 'white': '#61dafb', backgroundColor:  searchCategory == "Racism"? '#61dafb': 'white'}} onClick={() => searchCategory!="Racism" ? setSearchCategory("Racism") : setSearchCategory("")}>Racism</button>
+                    <button style={{ color:  searchCategory == "Sexism"? 'white': '#61dafb', backgroundColor:  searchCategory == "Sexism"? '#61dafb': 'white'}} onClick={() => searchCategory!="Sexism" ? setSearchCategory("Sexism") : setSearchCategory("")}>Sexism</button>
                 </div>
           </div>
       </div>
       <div>
-          <Card reportTitle="Why is there a rat hair in my pasta" reportContent="report content report contente ncjdnv cj cdn cxsjcs cnjncs cjsc" reportDate="nov 22th 2021" reportVotes="5"/>
-          <Card reportTitle="Why is there a rat hair in my pasta" reportContent="report content report contente ncjdnv cj cdn cxsjcs cnjncs cjsc" reportDate="nov 22th 2021" reportVotes="5"/>
-          <Card reportTitle="Why is there a rat hair in my pasta" reportContent="report content report contente ncjdnv cj cdn cxsjcs cnjncs cjsc" reportDate="nov 22th 2021" reportVotes="5"/>
+        {filtered.map((report) => {
+            return (
+              <Card reportTitle={report.title} reportContent={report.content} reportDate={report.date} reportTags={report.tags} reportVotes="5"></Card>
+            );
+        })}
       </div>
     </div>
   );
