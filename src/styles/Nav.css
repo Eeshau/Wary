@@ -5,7 +5,29 @@
     background-color: rgba(211, 211, 211, 0.486);
     position: sticky;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 60% auto auto auto;
     grid-gap: 50px;
     font-family: 'Poppins', sans-serif;
+    padding: 0px 40px;
+    text-decoration: none;
 }
+
+
+
+.Navbox a:link { 
+    text-decoration: none; 
+    color: #61dafb;
+}
+
+.Navbox a { 
+    text-decoration: none; 
+    color: black;
+    transition: color 1.5s ease;
+}
+
+.Navbox a:hover { 
+    text-decoration: none; 
+    color: #61dafb;
+}
+
+

@@ -28,14 +28,27 @@
     font-family: "Poppins", sans-serif;
 }
 
+.FormParent input, textarea, select { 
+    outline: none;
+}
 
 .FormParent option:hover {
     background-color: #61dafb;
     color: white;
     transition: background-color 1.5s ease;
     border-radius: 10px;
-
 }
+
+
+.FormParent option:checked { 
+    color: white;
+    background-color: #61dafb;
+    border-radius: 10px;
+}
+
+.select:not(:checked) {
+    color: gray;
+ }
 
 
 .FormParent form {

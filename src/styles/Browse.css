@@ -1,0 +1,33 @@
+.Browse-search input {
+    width: 100%;
+    padding: 7px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 0.5px solid #d3d3d3;
+    background-color: hsla(0,12%,93%,.541);
+    font-family: "Poppins", sans-serif;
+    outline: none;
+}
+
+.Browse-search {
+    padding: 40px;
+}
+
+
+.filterSection button {
+    border-radius: 30px;
+    border: solid 2px #61dafb;
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+}
+
+.filterSection {
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+    gap: 3%;
+  }

@@ -1,6 +1,27 @@
 .Card-Box {
     width: 500px;
     height: 300px;
-    background-color: blue;
+    background-color: rgba(211, 211, 211, 0.493);
     border-radius: 10px;
+    text-align: left;
+    padding: 30px;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 100px auto;
+    margin: 40px;
+}
+
+
+.Card-Box button{
+    text-align: center;
+    width: 45px;
+    background-color: #61dafb;
+    border: solid #61dafb;
+    color: white;
+}
+
+
+.CardVotes {
+    text-align: center;
+    padding-right: 50px;
 }
