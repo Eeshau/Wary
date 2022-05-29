@@ -1,17 +1,19 @@
-import React from 'react';
+import {ReactComponentElement, useState} from 'react';
 import '../styles/ReportForm.css'
 
 function ReportForm(props) {
+    const [visability, setVisability] = useState('Immediatly Visabile')
+    
     return (
         <div className='FormParent'>
             <h1>Submit a suspesion report</h1>
             <form>
                 <label>To Community</label>
                 <select data-placeholder="Begin typing a name to filter..." name="cars" id="cars" multiple>
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
+                    <option value="volvo">Neighbourhood</option>
+                    <option value="saab">Lewis Office</option>
+                    <option value="opel">Elitist University</option>
+                    <option value="audi">New York City</option>
                 </select>
                 <label>Report Title</label>
                 <input></input>
@@ -19,7 +21,7 @@ function ReportForm(props) {
                 <textarea></textarea>
                 <label>Report Keywords</label>
                 <input></input>
-                <button>Visability</button>
+                <button onClick={() => setVisability('Hidden')}>{visability}</button>
                 <button>Submit</button>
             </form>
 

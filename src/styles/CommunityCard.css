@@ -1,0 +1,12 @@
+.CommunityCardParent {
+    width: 300px;
+    height: 300px;
+    box-shadow: lightblue;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+
+.CommunityCardParent h1{
+    bottom: 0;
+}

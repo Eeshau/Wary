@@ -1,0 +1,46 @@
+.CommunitiesParent input {
+    width: 80%;
+    padding: 7px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 0.5px solid #d3d3d3;
+    background-color: hsla(0,12%,93%,.541);
+    font-family: "Poppins", sans-serif;
+}
+
+
+.CommunitiesParent {
+    padding: 40px;
+}
+
+.PrivateCommunity {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.PrivateCommunity label{
+    font-weight: 600;
+}
+
+.PrivateCommunity button{
+    background-color: #61dafb;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border: solid 1.5px #61dafb;
+    border-radius: 20px;
+    padding: 15px 1px;
+    font-weight: 700;
+    color: white;
+    transition: background-color 1.5s ease;
+    text-align: center;
+    width: 170px;
+    justify-self: right;
+    margin-right: 20%;
+}
+
+
+.PrivateCommunity button:hover {
+    background-color: transparent;
+    color: #61dafb;
+}
